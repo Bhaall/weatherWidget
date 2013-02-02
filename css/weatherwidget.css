@@ -1,0 +1,490 @@
+@font-face {font-family: 'Stag Sans Web USCC-Black'; src: url('../fonts/Stag Sans Web USCC-Black.eot'); src: url('../fonts/Stag Sans Web USCC-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/Stag Sans Web USCC-Black.woff') format('woff'),  url('../fonts/Stag Sans Web USCC-Black.ttf') format('truetype'),  url('../fonts/Stag Sans Web USCC-Black.svg#Stag Sans Web USCC-Black') format('svg'); font-weight: 900; font-style: normal; font-stretch: normal;}
+@font-face {font-family: 'Stag Sans Web USCC-Light'; src: url('../fonts/Stag Sans Web USCC-Light.eot'); src: url('../fonts/Stag Sans Web USCC-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Stag Sans Web USCC-Light.woff') format('woff'),  url('../fonts/Stag Sans Web USCC-Light.ttf') format('truetype'),  url('../fonts/Stag Sans Web USCC-Light.svg#Stag Sans Web USCC-Light') format('svg'); font-weight: 300; font-style: normal; font-stretch: normal;}
+@font-face {font-family: 'Stag Web USCC-Book Italic'; src: url('../fonts/Stag Web USCC-Book Italic.eot'); src: url('../fonts/Stag Web USCC-Book Italic.eot?#iefix') format('embedded-opentype'),  url('../fonts/Stag Web USCC-Book Italic.woff') format('woff'),  url('../fonts/Stag Web USCC-Book Italic.ttf') format('truetype'),  url('../fonts/Stag Web USCC-Book Italic.svg#Stag Web USCC-Book Italic') format('svg'); font-weight: 400; font-style: italic; font-stretch: normal;}
+@font-face {font-family: 'Stag Web USCC-Book'; src: url('../fonts/Stag Web USCC-Book.eot'); src: url('../fonts/Stag Web USCC-Book.eot?#iefix') format('embedded-opentype'),  url('../fonts/Stag Web USCC-Book.woff') format('woff'),  url('../fonts/Stag Web USCC-Book.ttf') format('truetype'),  url('../fonts/Stag Web USCC-Book.svg#Stag Web USCC-Book') format('svg'); font-weight: 400; font-style: normal; font-stretch: normal;}
+@font-face {font-family:'Stag Web USCC-Medium'; src:url('../fonts/Stag Web USCC-Medium.eot'); src:url('../fonts/Stag Web USCC-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/Stag Web USCC-Medium.woff') format('woff'),  url('../fonts/Stag Web USCC-Medium.ttf') format('truetype'),  url('../fonts/Stag Web USCC-Medium.svg#Stag Web USCC-Medium') format('svg'); font-weight: 500; font-style: normal; font-stretch: normal;}
+
+/* MAIN STYLES */
+html {font-size: 100%;}
+body,html { overflow-x: hidden; }
+body {font-size: 14px;}
+body, input, button, select, textarea { background: #D9E9E8; font-family: "Stag Web USCC-Book", Verdana, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { font-family: "Stag Web USCC-Medium", Verdana, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; line-height: 1.1; margin-bottom: 14px; margin-top: 14px; font-weight: normal; }
+
+.main-content h2,
+h1.article-title {font-family: "Stag Web USCC-Book", Verdana, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;}
+
+select.ui-usm-select {font-family: "Stag Web USCC-Medium", Verdana, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;}
+
+strong { font-weight: normal; font-family: "Stag Web USCC-Medium", Verdana, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;}
+a { text-decoration: none; color: #0065a4; }
+
+.ui-content.ui-body-a {padding:0;}
+
+.ui-header {height: 60px; border-bottom: 0;}
+
+/* weather widget */
+#weather-widget {
+	width: 100%;
+	height: 101px;
+	overflow:
+	hidden;
+	position: relative;
+	box-shadow: inset 0 2px 11px -4px black;
+	-moz-box-shadow: inset 0 2px 11px -4px black;
+	-webkit-box-shadow: inset 0 2px 11px -4px black;
+}
+#weather-widget ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#weather-widget #scroller {
+	position: absolute;
+	left: 0;
+	/*width: 550px;*/
+	width: 100%;
+	box-shadow: inset 0 -2px 11px -4px black;
+	-moz-box-shadow: inset 0 -2px 11px -4px black;
+	-webkit-box-shadow: inset 0 -2px 11px -4px black;
+}
+#weather-widget ul li {
+	float: left;
+	width: 90px;
+	position: relative;
+	border-right: 1px solid #EAEFEF;
+	overflow: hidden;
+	margin: 10px 0;
+}
+#weather-widget ul li.today-item, 
+#weather-widget ul li.app-item {
+	width: 268px;
+	margin: 0;
+	height: 101px;
+}
+#weather-widget ul li.form-item {
+	width:300px;
+	height: 101px;
+	margin: 0;
+}
+#weather-widget ul li.today-item > img {
+	float: left; 
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	width: 60px;
+}
+#weather-widget ul li.today-item .data-container {
+	margin-left: 65px;
+}
+#weather-widget ul li.today-item p.weather-location {
+	font-family: 'Stag Web USCC-Medium', Verdana, Arial, sans-serif;
+	color: #0065a4;
+	font-size: 14px;
+	margin: 10px 0 3px;
+}
+#weather-widget ul li.today-item .ui-select .ui-btn-text {
+	text-align: left;
+} 
+#weather-widget ul li.today-item .ui-select .ui-btn-inner {
+	padding-left: 0;
+}
+#weather-widget ul li.today-item .ui-select .ui-btn {
+	margin-bottom: 0;
+}
+#weather-widget ul li.today-item .location-change-trigger {
+	position: absolute;
+	right: 5px;
+	top: 4px;
+	color: #0262A3;
+	font-size: 11px;
+	padding: 10px;
+}
+#weather-widget ul li.today-item .weather-temperature {
+	margin: 0; line-height: 2em;
+}
+#weather-widget ul li.today-item a.weather-provider {
+	/*padding:10px 0;*/
+	padding:40px 60px 20px 0;
+}
+#weather-widget ul li.today-item .weather-temperature .weather-temperature-now {
+	margin-right: 11px;
+}
+#weather-widget ul li.today-item .weather-temperature .weather-temperature-now em {
+	font-size: 1.8em;
+	font-weight: normal;
+	font-style: normal;
+}
+#weather-widget ul li.today-item .weather-temperature .weather-temperature-now em sup {
+	top: 4px;
+	font-size: 15px;
+}
+#weather-widget ul li.today-item .weather-temperature .weather-temperature-now sup {
+	font-size: 13px;
+	position: relative;
+	top: -3px;
+}
+#weather-widget ul li.today-item .weather-temperature .weather-temperature-forecast {
+	font-size: 12px;
+}
+#weather-widget ul li p.weather-date {
+	font-size: 10px;
+	text-align: center;
+	margin: 15px 0 5px;
+}
+#weather-widget ul li img.forecast-image {
+	position: absolute;
+	top: 34px;
+	left: 9px;
+	width: 42px;
+}
+.weater-forecast-max, 
+.weater-forecast-min {
+	margin-left: 53px;
+	font-size: 12px;
+}
+
+/* featured app */
+#weather-widget ul li.app-item.free-item {
+	background: url(../images/free.png) right top no-repeat;
+	background-size: auto 100%;
+	border-right: 0;
+}
+#weather-widget ul li.app-item img {
+	width:50px;
+	left: 10px;
+	position: absolute;
+	top: 27px;	
+}
+#weather-widget ul li.app-item h1 {
+	color: #333;
+	font-size: 12px;
+	margin: 25px 0 5px;
+	padding:0;
+}
+#weather-widget ul li.app-item h2 {
+	color: #0065a4;
+	font-size: 14px;
+	margin: 0 0 3px;
+	padding:0;	
+}
+#weather-widget ul li.app-item h2 a.app-link {
+	font-size: 14px;	
+}
+#weather-widget ul li.app-item .data-container {
+	margin-left: 75px;
+}
+#weather-widget ul li.app-item .data-container p {
+	margin-top: 0;
+}
+#weather-widget ul li.app-item .data-container p a {
+	font-size: 12px;
+	padding: 0 10px 0 0;
+}
+#weather-widget ul li.app-item .data-container p a:last-child {
+	border-left: 1px solid #0065a4;
+	padding: 0 0 0 10px;
+}
+
+
+/* location form */
+#ww-weather-location {
+	padding: 5px 15px 0;
+}
+#ww-weather-location label { 
+	display: block;
+	line-height: 25px;
+	font-weight: normal;
+	font-size: 14px;
+	font-family: "Stag Web USCC-Medium";
+	color:#333;
+	margin-bottom: .3em; 
+}
+#ww-weather-location .search_btn {
+	float: left;
+	height: 32px;
+	margin:0 0 0 -52px;
+	width: 51px;
+	border-radius:0;
+	position:relative;
+}
+#ww-weather-location .search_text {
+	padding: 10px 50px 10px 10px;
+	margin: 0;
+	width: 99%;
+	height: 32px;
+	font-size: 14px;
+	position:relative;
+	-webkit-user-modify: read-write-plaintext-only;
+}
+#ww-weather-location input::-webkit-input-placeholder {
+    color:    #999;
+}
+#ww-weather-location input:-moz-placeholder {
+    color:    #999;
+}
+#ww-weather-location input:-ms-input-placeholder {
+    color:    #999;
+}
+#ww-weather-location input {
+	border: 0;
+	float: left;
+	margin-right: 0;
+}
+#ww-weather-location p {
+	margin: 0.3em 0 0;
+	float:left;
+}
+#ww-weather-location.ww-form-error label { 
+	color: red;
+}
+
+
+/*
+ * For City and Zip Search
+ * 
+ */
+
+/* dropdown for city */
+.form-item .ui-select {
+	width:80%;
+	float:left;
+	border: none;
+}
+
+.form-item .ui-select .ui-btn {
+	margin:0;
+	height: 32px;
+}
+
+.form-item .ui-select .ui-btn-inner {
+	height: 17px;
+}
+
+.form-item .ui-select .ui-mini.ui-btn-icon-right .ui-icon {right:0;}
+
+.form-item .ui-select .ui-btn-inner .ui-icon {
+	background-image: url("../images/icons/icon-dropdown.png");
+	background-position: right top;
+	background-size: contain;
+	height: 30px;
+	margin-top: -1px;
+	right: 0;
+	top: 0;
+	width: 37px;	
+}
+
+#weather-widget ul li.form-item {
+	width:300px;
+	height: 101px;
+	margin: 0;
+}
+
+/* severe weather warning */
+#weather-warning {
+	background: #f8f7f5;
+	height:30px;
+	display:none;
+	
+	-webkit-box-shadow: 0 4px 3px -4px rgba(0, 0, 0, .5);
+	   -moz-box-shadow: 0 4px 3px -4px rgba(0, 0, 0, .5);
+	        box-shadow: 0 4px 3px -4px rgba(0, 0, 0, .5);	
+}
+#weather-warning a {
+	line-height: 30px;
+	color: red;
+	font-family: 'Stag Web USCC-Medium', Verdana, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	display: block;
+}
+#weather-warning img {
+	float: left;
+}
+
+.ui-body-a,
+.ui-overlay-a {
+	border: 1px solid #aaaaaa /*{a-body-border}*/;
+	color: #333333 /*{a-body-color}*/;
+	text-shadow: 0 /*{a-body-shadow-x}*/ 0 /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ 0 /*{a-body-shadow-color}*/;
+	background: #ffffff /*{a-body-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff /*{a-body-background-start}*/), to( #ffffff /*{a-body-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #ffffff /*{a-body-background-start}*/, #ffffff /*{a-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #ffffff /*{a-body-background-start}*/, #ffffff /*{a-body-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #ffffff /*{a-body-background-start}*/, #ffffff /*{a-body-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #ffffff /*{a-body-background-start}*/, #ffffff /*{a-body-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #ffffff /*{a-body-background-start}*/, #ffffff /*{a-body-background-end}*/);
+}
+.ui-overlay-a {
+	background-image: none;
+	border-width: 0;
+}
+.ui-body-a,
+.ui-body-a input,
+.ui-body-a select,
+.ui-body-a textarea,
+.ui-body-a button {
+	 font-family: "Stag Web USCC-Book", Verdana, Arial, sans-serif /*{global-font-family}*/;
+}
+.ui-bar-a {
+	border: 1px solid #b3b3b3 /*{a-bar-border}*/;
+	background: #d9e9e8 /*{a-bar-background-color}*/;
+	color: #0065a4 /*{a-bar-color}*/;
+	font-weight: bold;
+	text-shadow: 0 /*{a-bar-shadow-x}*/ 0 /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ 0 /*{a-bar-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #d9e9e8 /*{a-bar-background-start}*/), to( #d9e9e8 /*{a-bar-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #d9e9e8 /*{a-bar-background-start}*/, #d9e9e8 /*{a-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #d9e9e8 /*{a-bar-background-start}*/, #d9e9e8 /*{a-bar-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #d9e9e8 /*{a-bar-background-start}*/, #d9e9e8 /*{a-bar-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #d9e9e8 /*{a-bar-background-start}*/, #d9e9e8 /*{a-bar-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #d9e9e8 /*{a-bar-background-start}*/, #d9e9e8 /*{a-bar-background-end}*/);
+}
+
+.ui-bar-c {
+	border: 1px solid #b3b3b3;
+	background: #f6f7f2;
+	color: #0065a4;
+	font-weight: bold;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f6f7f2), to( #f6f7f2)); 
+	background-image: -webkit-linear-gradient( #f6f7f2 , #f6f7f2 ); 
+	background-image:    -moz-linear-gradient( #f6f7f2 , #f6f7f2 ); 
+	background-image:     -ms-linear-gradient( #f6f7f2 , #f6f7f2 );
+	background-image:      -o-linear-gradient( #f6f7f2 , #f6f7f2 );
+	background-image:         linear-gradient( #f6f7f2 , #f6f7f2 );
+}
+.ui-bar-c .ui-link-inherit {
+	color: #0065a4;
+}
+
+.ui-bar-c a.ui-link {
+	color: #7cc4e7;
+	font-weight: bold;
+}
+
+.ui-bar-c a.ui-link:visited {
+    color: #2489ce;
+}
+
+.ui-bar-c a.ui-link:hover {
+	color: #2489ce;
+}
+
+.ui-bar-c a.ui-link:active {
+	color: #2489ce;
+}
+
+.ui-bar-c,
+.ui-bar-c input,
+.ui-bar-c select,
+.ui-bar-c textarea,
+.ui-bar-c button {
+	 font-family: 'Stag Web USCC-Medium', Verdana, Arial, sans-serif;
+}
+.ui-body-c,
+.ui-overlay-c {
+	border: 1px solid #aaaaaa ;
+	color: #333333 ;
+	background: #f9f9f9 ;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f9f9f9 ), to( #eeeeee )); 
+	background-image: -webkit-linear-gradient( #f9f9f9 , #eeeeee ); 
+	background-image:    -moz-linear-gradient( #f9f9f9 , #eeeeee ); 
+	background-image:     -ms-linear-gradient( #f9f9f9 , #eeeeee ); 
+	background-image:      -o-linear-gradient( #f9f9f9 , #eeeeee ); 
+	background-image:         linear-gradient( #f9f9f9 , #eeeeee );
+}
+.ui-overlay-c {
+	background-image: none;
+	border-width: 0;
+}
+.ui-body-c,
+.ui-body-c input,
+.ui-body-c select,
+.ui-body-c textarea,
+.ui-body-c button {
+	 font-family: 'Stag Web USCC-Book', Verdana, Arial, sans-serif;
+}
+.ui-body-c .ui-link-inherit {
+	color: #fff;
+}
+
+.ui-body-c .ui-link {
+	color: #0065a4;
+	font-weight: normal;
+}
+
+.ui-body-c .ui-link:visited {
+    color: #0065a4;
+}
+
+.ui-body-c .ui-link:hover {
+	color: #2489ce;
+}
+
+.ui-body-c .ui-link:active {
+	color: #2489ce;
+}
+
+.ui-btn-up-c {
+	border: 1px solid #cccccc;
+	background: #eeeeee;
+	font-weight: bold;
+	color: #0263A2;
+	/*
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff ), to( #f1f1f1 )); 
+	background-image: -webkit-linear-gradient( #ffffff, #f1f1f1 );
+	background-image:    -moz-linear-gradient( #ffffff, #f1f1f1 );
+	background-image:     -ms-linear-gradient( #ffffff, #f1f1f1 ); 
+	background-image:      -o-linear-gradient( #ffffff, #f1f1f1 );
+	background-image:         linear-gradient( #ffffff, #f1f1f1 );
+	*/
+	background:#FFFFFF;
+}
+.ui-btn-up-c:visited,
+.ui-btn-up-c a.ui-link-inherit {
+	color: #0263A2;
+}
+.ui-btn-hover-c {
+	border: 1px solid #bbbbbb;
+	background: #dfdfdf;
+	font-weight: bold;
+	color: #2f3e46;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f6f6f6), to( #e0e0e0)); 
+	background-image: -webkit-linear-gradient( #f6f6f6 , #e0e0e0 );
+	background-image:    -moz-linear-gradient( #f6f6f6 , #e0e0e0 );
+	background-image:     -ms-linear-gradient( #f6f6f6 , #e0e0e0 );
+	background-image:      -o-linear-gradient( #f6f6f6 , #e0e0e0 );
+	background-image:         linear-gradient( #f6f6f6 , #e0e0e0 );
+}
+.ui-btn-hover-c:visited,
+.ui-btn-hover-c:hover,
+.ui-btn-hover-c a.ui-link-inherit {
+	color: #0263A2;
+}
+.ui-btn-down-c {
+	border: 1px solid #bbbbbb;
+	background: #d6d6d6;
+	font-weight: bold;
+	color: #2f3e46;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #d0d0d0 ), to( #dfdfdf ));
+	background-image: -webkit-linear-gradient( #d0d0d0 , #dfdfdf ); 
+	background-image:    -moz-linear-gradient( #d0d0d0 , #dfdfdf );
+	background-image:     -ms-linear-gradient( #d0d0d0 , #dfdfdf ); 
+	background-image:      -o-linear-gradient( #d0d0d0 , #dfdfdf ); 
+	background-image:         linear-gradient( #d0d0d0 , #dfdfdf );
+}
+.ui-btn-down-c:visited,
+.ui-btn-down-c:hover,
+.ui-btn-down-c a.ui-link-inherit {
+	color: #2f3e46 ;
+}
+.ui-btn-up-c,
+.ui-btn-hover-c,
+.ui-btn-down-c {
+	font-family: 'Stag Web USCC-Medium', Verdana, Arial, sans-serif;
+	text-decoration: none;
+}
+.ui-shadow-inset {
+	-moz-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+}
